@@ -1,11 +1,12 @@
 Hotels::Application.routes.draw do
 
+  devise_for :reservations
   get "destroy/reservations"
   root :to => 'pages#home'
 
   get 'contact' => 'pages#contact'
 
-
+  resources :bookings
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
